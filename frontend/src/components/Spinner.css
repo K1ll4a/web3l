@@ -1,0 +1,69 @@
+.spinner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.spinner label {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.spinner-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.spinner-controls button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--accent);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spinner-controls button:hover:not(:disabled) {
+  background: var(--panel);
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.spinner-controls button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.spinner-controls button:disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.spinner-controls input {
+  flex: 1;
+  padding: 11px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.spinner-controls input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: var(--panel);
+}
